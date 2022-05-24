@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="utf-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title></title>
+</head>
+<body>
+
+	<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+
+<div class="mermaid">
+    graph LR
+P4[P4. Tiesiausias kelias į vidinę taiką yra per ryšį su savimi]
+P5[P5. Pasirinkimas yra vidinis procesas]
+P6[P6. Visi žmonės gali atjausti]
+P9[P9. Mūsų pasaulis siūlo apsčiai išteklių poreikių patenkinimui]
+Ia1[Ia1. Atjauta sau]
+Ia2[Ia2. Kalbėjimas iš širdies]
+Ia3[Ia3. Priėmimas su atjauta]
+Ia4[Ia4. Pirmenybės teikimas ryšiui]
+Ia5["Ia5. Anapus #quot;teisingumo#quot; ir #quot;klaidingumo#quot;"]
+Ib2[Ib2. Atsakomybės prisiėmimas už savo veiksmus]
+Ib3[Ib3. Gyvenimas taikoje su nepatenkintais poreikiais]
+Ib4[Ib4. Didinti gebėjimą tenkinti poreikius]
+Ib5[Ib5. Didinti gebėjimą priimti dabarties akimirką]
+Ic2[Ic2. Gerinti gebėjimus dalintis ištekliais atsižvelgiant į poreikius]
+Ic3[Ic3. Apsaugantis jėgos naudojimas]
+</div>
+
+
+	<div class="mermaid">
+        graph TB
+        subgraph Legenda
+			direction TB
+    		P[NVC Prielaida] --- B[Įsitikinimas]
+    		B --- I[NVC Intencija]
+    		I --- AI[Papildoma intencija]
+    		AI --- S[NVC Įgūdis]
+    		S --- A[NVC Įgūdis, bet faktiškai požiūris]
+    		A --- M[Mišrus: NVC Įgūdis su įsitikinimu]
+		end
+        
+        P1[P1. Visi žmonės turi<br />tuos pačius poreikius] --> ALLNEEDS[Visi kiekvieno asmens<br />poreikiai yra svarbūs]
+        ALLNEEDS --> S6[6. Sąmoningumas poreikiams] 
+		S6 --> P2[P2. Visi veiksmai yra<br />bandymai patenkinti poreikius]
+        P2 --> B2[Visos strategijos, tiek išorinės - elgesys,<br />tiek vidinės - mąstymas, yra siekis apliepti poreikius] 
+        B2 --> B3[Kai strategijos neatliepia poreikių, jas verta keisti,<br />tokiu būdu, kad daugiau poreikių būtų atliepta,<br />tuo pačiu išlaikant senų poreikių atliepimą]
+        B3 --> S22[22. Dėkingumas]
+        S22 --> S1["1. Sutelktas dėmesys (į čia ir dabar)"]
+		S1 --> P3[P3. Jausmai nurodo į tai,<br />kad poreikiai yra patenkinti arba ne]
+		S1 --> P10[P10. Žmonės keičiasi]
+        P10 & S20 --> I1[Mąstymo ir elgesio transformavimas]
+        I1 --> S12[12. Įžvalgumas]
+        S12 --> S2[2. Stebėjimas]
+        P3 --> B4[Jausmai yra svarbūs,<br />nes informuoja apie poreikius ir mintis]
+        B4 --> S3[3. Jausmų sąmoningumas]
+		S3 --> Ib1[Ib1. Atsakomybės prisiėmimas už savo jausmus]
+		Ib1 --> S5[5. Atsakomybės prisiėmimas<br />už savo jausmus]
+		ALLNEEDS --> P8[P8. Žmonės patenkina poreikius per tarpusavio santykius]
+		P8 --> Ic1[Ic1. Rūpinimasis visų žmonių poreikiais]
+		Ic1 --> S13[13. Gyvenimas susisiejus tarpusavyje]
+		S13 --> P7[P7. Žmonės mėgsta duoti]
+		P7 --> S25[25. Dalijimasis galia]
+		S23 --> S20[20. Lankstumas bendraujant]
+		S25 --> S24[24. Gyvybingumo auginimas]
+		S24 --> S23[23. Atviraširdžio davimo<br />ir priėmimo tėkmė]
+		S25 --> S28[28. Holistinių sistemų palaikymas]
+		S2 & S11 --> S4[4. Savęs priėmimas]
+		S4 --> S7[7. Ryšio su savimi atstatymas<br />ir atsigavimas nuo impulsyvumo]
+		S5 & S7 --> S16[16. Kantrybė]
+		I1 --> S11[11. Priešo vaizdinius išsklaidymas]
+		S11 --> S10[10. Empatija]
+		S10 --> S21[21. Konfliktų transformavimas]
+		S21 & S7 --> S17[17. Atsakymas į kitų impulsyvumą]
+		S17 & S20 --> S18[18. Atvirumas grįžtamajam ryšiui]
+		S10 --> S15[15. Pagalba ryšio sukūrimui]
+		S15 --> S14[14. Nuoširdi saviraiška]
+		S21 & S4 & S5 & S16 --> S19[19. Naudingas apgailestavimas]
+		S19 & S4 & S5 --> S9[9. Gedėjimas]
+		S20 --> S8[8. Sąmoningumas prašymams<br />ir prašymų darymas]
+		S5 --> S27[27. Sąmoningumas apie<br />gebėjimą atsakyti]
+		S20 --> S26[26. Vaidmenų peržengimas]
+
+
+        classDef assumption fill:#0ff,stroke:#333,stroke-width:4px;
+		class P,P1,P2,P3,P4,P5,P6,P7,P8,P9,P10 assumption;
+
+        classDef belief fill:#09f,stroke:#333,stroke-width:4px;
+		class B,ALLNEEDS,B2,B3,B4 belief;
+
+        classDef intention fill:#b0f,stroke:#333,stroke-width:4px;
+		class I,Ia1,Ia2,Ia3,Ia4,Ia5,Ib1,Ib2,Ib3,Ib4,Ib5,Ic1,Ic2,Ic3 intention;
+
+
+        classDef attitudeintention fill:#b9f,stroke:#333,stroke-width:4px;
+		class AI,I1 attitudeintention;
+
+        classDef skill fill:#ff0,stroke:#333,stroke-width:4px;
+		class S,END1,S1,S2,S3,S8,S9,S16 skill;
+
+        classDef attitudeskill fill:#ffa,stroke:#333,stroke-width:4px;
+		class A,S4,S5,S11 attitudeskill;
+
+        classDef mix fill:#f90,stroke:#333,stroke-width:4px;
+		class M,END2,S6,S22 mix;
+
+    </div>
+
+
+<table>
+	<tr>
+		<td>
+<h1>Įgūdžiai</h1>
+<details><summary><b>6. Sąmoningumas poreikiams</b>  Sąmoningumas apie (ir noras pagerbti) poreikius, kurie yra esminės, universalios ir pagrindinės gyvenimo savybės.</summary><ol><li>Nežinau apie universalius poreikius; strategijas laikau poreikiais, kas veda link prisirišimo ir priešinimosi.</li><li>Intelektualiai suprantu universalius poreikius; painioju poreikius su strategijomis, galvoju, kad būtina turėti tam tikrą strategiją.</li><li>Matau skirtumą tarp poreikių ir strategijų; turiu žodyną išreikšt jausmams ir poreikiams; susieju jausmus su už jų slypinčiais poreikiais (kartais vis dar su pastangomis, ypač, kai situacija iššaukia reakciją).</li><li>Gyvenu pasiremdamas suvokimu, kad viskas, ką darom, yra pastangos (efektyvios ar ne) išgyventi ir klestėti.</li></ol></details>
+<details><summary><b>22. Dėkingumas</b>  Atpažinti vertę, branginti ir mėgautis tuo, kas yra.</summary><ol><li>Sutelkiu dėmesį į tai, ko trūksta, ir skundžiuosi; ieškau pripažinimo per pagyrimus ir apdovanojimus, ir pats juos naudoju su kitais.</li><li>Pastebiu, kad gyrimas, apdovanojimai ir išorinio pripažinimo siekimas nesukuria ryšio; pradedu pastebėsite patenkinti poreikių branginimo vertę.</li><li>Noriu ir galiu būti sąryšyje su tuo, kas vyksta, kaip su dovana, kuria galiu mėgautis ir išreikšti ją kaip tokią.</li><li>Gyvenu pripažindamas, kad viskas gali būti stimulas mėgavimuisi ir/ar augimui.</li></ol></details>
+<details><summary><b>1. Sutelktas dėmesys (į čia ir dabar)</b>  Buvimas atidžiam tam, kas vyksta dabar. Nepasimetimas mąstyme, emocinėse reakcijose ir t.t.</summary><ol><li>Nesąmoningai nuklystu į praeitį ar ateitį; tapatinuosi su mąstymu ir darymu.</li><li>Tampu sąmoningas skirtumui tarp budraus dėmesio į tai, kas iš tikrųjų vyksta, ir pasiklydimo mintyse.</li><li>Gebu stebėti mintis ir jausmus, ir sąmoningai, o ne automatiškai reaguoti; gebu sugrąžinti save į budrumą, pastebėjęs nuklydimą mintyse.</li><li>Laisvas budrumas į tai, kas vyksta kiekvieną akimirką, su giliu prasmės ir pasirinkimo jausmu; atvirumas tam, kas yra, su išradingumu, tarpusavio priklausomybe bei praeities ir ateities perspektyva.</li></ol></details>
+<details><summary><b>12. Įžvalgumas</b>  Aiškumas, įžvalga ir išmintis darant gyvybei tarnaujančius sąvokų atskyrimus ir pasirinkimus; atpažinimas, kad turime pasirinkimo laisvę.</summary><ol><li>Mano nuomonė ir pasirinkimai pagrįsti teisimu, kas yra gerai ar blogai; galvoju, kad mano vertinimai yra faktai.</li><li>Žinau kitą būdą, kaip vertinti ir rinktis, atsižvelgiant į universalius poreikius, o ne teisti kas yra gerai ar blogai, teisinga ar neteisinga.</li><li>Turiu augantį gebėjimą daryti vertinimus ir pasirinkimus su plačiu požiūriu, suprasti gilesnę prasmę ir intencijas esančias po paviršiumi.</li><li>Intuityviai derinu savyje aiškumą, įžvalgą ir išmintį daryti gyvybei tarnaujančius vertinimus ir pasirinkimus.</li></ol></details>
+<details><summary><b>2. Stebėjimas</b>  Pastebėjimas (ir galbūt apibūdinimas) savo jutiminių ir protinių patirčių, ir jų atskyrimas nuo interpretacijų, kurias joms priskiriu.</summary><ol><li>Nuolat painioju interpretacijas ir stebėjimus; darau prielaidą, kad vertinimai ir interpretacijos yra faktai.</li><li>Tampu sąmoningas tam, kad interpretacijos skiriasi nuo stebėjimų, kai peržiūriu praeities įvykius; tačiau vis dar žemas įgūdis ir aiškumas apie šį skirtumą, kai bendrauju realiu laiku.</li><li>Vis dažniau prisimenu ir atskiriu stebėjimus ir interpretacijas.</li><li>Lengvai gebu atskirti stebėjimus ir interpretacijas.</li></ol></details>
+<details><summary><b>3. Jausmų sąmoningumas</b>  Gebėjimas identifikuoti ir patirti savo fizinius pojūčius ir emocijas.</summary><ol><li>Mažai arba visai nesuprantu emocijų; identifikuojuosi su emocijomis ir/arba priešinuosi joms.</li><li>Pradedu pastebėti ir suvokti, kad jausmai turi vertę.</li><li>Su pastangomis pajėgiu atpažinti, priimti ir leisti sau patirti emocijas.</li><li>Lengvai atpažįstu, priimu, ir leidžiu sau patirti emocijas.</li></ol></details>
+<details><summary><b>5. Atsakomybės prisiėmimas už savo jausmus</b>  Gyvenimas pagrįstas žinojimu, kad tik aš pats sukeliu savo emocijas - mano emocijos nėra sukeliamos kitų.</summary><ol><li>Kai kyla jausmai, kaltinu save, kitus arba išorines aplinkybes.</li><li>Kartais pastebiu save kaltinantį ir kritikuojantį, ir man neaišku, kaip prisiimti atsakomybę už savo jausmus.</li><li>Gebu pastebėti, kai kyla reakcija ir panaudoju tai, kaip ženklą siekti ryšio su savimi.</li><li>Gyvenu remdamasis supratimu, kad mūsų emocinė patirtis kyla iš mūsų poreikių būklės ir mūsų mąstymo.</li></ol></details>
+<details><summary><b>13. Gyvenimas susisiejus tarpusavyje</b>  Gyvenimas suprantant, kad kiekvienas asmuo yra susijęs su kiekvienu kitu asmeniu - kiekviena sistemos dalis veikia kiekvieną kitą dalį.</summary><ol><li>Laikausi nepriklausomybės/priklausomybės, arba/arba, dominavimo/paklusnumo perspektyvų, nežinodamas kitų alternatyvų.</li><li>Žinau (ir esu susidomėjęs) idėją, kad visi poreikiai yra svarbūs; pastebiu arba/arba mąstymą, ir polinkį paklusti/maištauti.</li><li>Dažniausiai atsižvelgiu į kitų žmonių poreikius taip pat kaip ir į savo.</li><li>Nuolatos esu atviras kitų požiūriams ir poreikiams; patiriu kitų poreikius kaip neatsiejamai susietus su manais.</li></ol></details>
+<details><summary><b>20. Lankstumas bendraujant</b>  Atvirumas ir įvairiapusiškumas bendraujant su kitais.</summary><ol><li>Iš įpročio bendrauju iš požiūrio taško kas teisinga/neteisinga, laimėti/pralaimėti, 'turėčiau', 'privalau' t.t.</li><li>Labiau gebu atskirti gyvybei svetimus komunikacijos modelius ir NVC. Tačiau vis dar komunikuoju impulsyviai. Formaliai ir droviai išreiškiu NVC nuoširdumą ir empatiją; galvoju, kad NVC yra 'stebėjimai, jausmai, poreikiai ir prašymai'.</li><li>Esu pasiryžęs ir paprastai gebu išgirsti stebėjimus, jausmus, poreikius ir prašymus, nepriklausomai nuo to, kaip jie yra pateikiami. Pradėjau eksperimentuoti su 'gatvės žirafos kalba', kalbėti tais būdais, kurie labiau tikėtini sukurti ryšį.</li><li>Bendrauju natūraliai su autentiškumo ir empatija. Savo raišką pritaikau prie dalyvaujančiųjų poreikių ir stilių, tokiu būdu, kad dažnai ji net 'neskamba kaip NVC kalba'.</li></ol></details>
+<details><summary><b>4. Savęs priėmimas</b>  Savęs priėmimas su besąlygišku rūpestingumu.</summary><ol><li>Nuolat patiriu impulsyvų savęs vertinimą ir teisimą pasireiškiantį gėda, savęs kaltinimu, savikritiką, gynybiškumu ar savęs išaukštinimu.</li><li>Pastebiu savęs vertinimą ir teisimą, ir suvokiu to kainą savo gerovei; ilgiuosi savęs priėmimo.</li><li>Didėjantis savęs priėmimas ir gyvenimą praturtinantis atsaką į savo jausmus, mintis, poreikius ir elgesį.</li><li>Turiu aiškų savęs suvokimą ir rūpinuosi savimi.</li></ol></details>
+<details><summary><b>7. Ryšio su savimi atstatymas ir atsigavimas nuo impulsyvumo</b>  Impulsyvumas - vidinis pasipriešinimas tam, kas vyksta dabar. Atsigavimas - pasipriešinimo paleidimas. Ryšio su savimi atstatymas - buvimas su savo patirtimi su sutelktu dėmesiu ir atjauta.</summary><ol><li>Dažniausiai nepastebiu savo impulsyvių įpročių.</li><li>Kartais pastebiu įprastus elgesio modelius ir prisimenu, kad galiu pasirinkti empatiją ir/ar sąžiningumą.</li><li>Kai situacija iššaukia reakciją, paprastai prisimenu, kad turiu pasirinkimą; pirmoji reakcija paprastai būna empatija ir/ar sąžiningumas.</li><li>Pastebiu vidinį susivaržymą ir natūraliai atveriu.</li></ol></details>
+<details><summary><b>8. Sąmoningumas prašymams ir prašymų darymas</b>  Pasiryžimas paprašyti ko norime, su atvirumu bet kokiam atsakymui; neprisirišimas prie konkretaus rezultato.</summary><ol><li>Reikalauju to, ko noriu, arba esu nepasiryžęs/negaliu paprašyti ko noriu.</li><li>Pradedu suvokti, kaip prisirišimas, reikalavimas ir nesugebėjimas paprašyti, ko noriu, mažina šansus patenkinti poreikius.</li><li>Paprastai, noriu ir galiu padaryti tikslius prašymus, o kai pastebiu prisirišimą prie tam tikros strategijos, siekiu pereiti nuo suvaržymo į atvirumą ir kūrybiškumą.</li><li>Pasiryžęs prašyti ko noriu; gebu būti sutelkęs dėmesį, kūrybiškas ir atjaučiantis, net jei gaunu atsakymą 'ne'.</li></ol></details>
+<details><summary><b>9. Gedėjimas</b>  Praradimo kančios transformavimas; pasipriešinimo paleidimas, ir pasirengimas leisti praradimo patirčiai atsiskleisti.</summary><ol><li>Kaltinu save, kitus ir/ar aplinkybes dėl praradimo; priešinuosi praradimo sukeltiems jausmams; stengiuosi būti 'stiprus' ar slepiu jausmus nuo kitų.</li><li>Žinau savo tendenciją priešintis ar kaltinti dėl patirtos netekties.</li><li>Gebu savyje stebėti kylantį vengimą ar kaltinimą, susijusį su netektimi, paleidžiu įsivaizdavimą, kad kažkas su tuo yra negerai ir leidžiu sau patirti kylančius jausmus, esu atviras išgirsti savo poreikius.</li><li>Pilnai integruoju netekties patirtį į gyvenimo visumą.</li></ol></details>
+<details><summary><b>10. Empatija</b>  Buvimas kito patirties akivaizdoje; besąlygiškas kito priėmimas.</summary><ol><li>Nuolat atsakau kitiems su pritarimu, patarimais, kritika, nukreipiu dėmesį nuo kito link savęs.</li><li>Lengvai pasimetu pasakojime. Kartais gebu spėti kito stebėjimus, jausmus, poreikius ir prašymus (su jausmų/poreikių sąrašų pagalba). Turiu bundančią intenciją suteikti kitiems erdvę, buvimą dabartyje ir sutelktą dėmesį.</li><li>Gebu būti su kitu be bandymų jo vesti į priekį, ir galiu atspindėti kito patirtį be pritarimo, nuomonės primetimo ar įvertinimų.</li><li>Natūraliai sutelkiu dėmesį ir energiją būdamas su kito patirtimi, ir besąlygiškai jį priimu.</li></ol></details>
+<details><summary><b>11. Priešo vaizdinius išsklaidymas</b>  Peržengimas nuostatos, kad kitas nusipelno būti baudžiamas ar žalojamas.</summary><ol><li>Mąstau 'mes prieš juos' kategorijomis; 'jie' nusipelno būti baudžiami ar žalojami.</li><li>Žinau priešo vaizdinių turėjimo kainą, ir galimą vertę tyrinėjant alternatyvas bausmei.</li><li>Kai pastebiu, kad laikau asmenį ar grupę priešais, gebu užmegzti ryšį su kiekvieno dalyvaujančio žmogiškumu, ir išsklaidyti priešo vaizdinius.</li><li>Žvelgiu į kiekvieną su atjauta, su pagarba visų gerovei.</li></ol></details>
+<details><summary><b>14. Nuoširdi saviraiška</b>  Atsakomybės už savo patirtį prisiėmimas ir pasiryžimas reikštis autentiškai be kaltinimo ar kritikos.</summary><ol><li>Nuolat skundžiuosi, kaltinu ir kritikuoju, kai esu nusiminęs; dalijuosi nuomone ir įsitikinimais kaip neabejotinais dalykais.</li><li>Lavinu augantį žinojimą kaip kai kurie mąstymo ir raiškos šablonai turi polinkį vesti į atskirtį; pradedu tyrinėti alternatyvas.</li><li>Dažniausiai gebu reikštis autentiškai su intencija užmegzti ryšį, net kai esu įtampoje.</li><li>Išreiškiu save su pažeidžiamumu, brangindamas kiekvieno poreikius; esu atviras visiems rezultatams.</li></ol></details>
+<details><summary><b>15. Pagalba ryšio sukūrimui</b>  Pagalba siekiant empatijos ir nuoširdumo dialoge, su intencija sukurti ryšį.</summary><ol><li>Kalbu labiau 'į' žmogų nei 'su' žmogumi; ginčijuosi, įtikinėju ar nepasisakau apie savo poreikius.</li><li>Pastebiu gyvybei svetimus bendravimo šablonus ir stengiuosi turėti daugiau alternatyvų kaip palaikyti ryšį.</li><li>Turiu sąmoningą intenciją sukurti ryšį; derinu atvirumą su kvietimu kitiems išreikšti save.</li><li>Bendrauju autentiškai ir su empatija; padedu žmonėms užmegzti ryšį.</li></ol></details>
+<details><summary><b>16. Kantrybė</b>  Išlikimas dėmesingais dabartyje, kai jaučiame įtampą. Gebėjimas išbūti su savo reakcijomis, be jų išraiškos.</summary><ol><li>Dažniausiai susitapatinu su intencija gauti ko noriu, ir/ar su paklusnumu.</li><li>Esu nekantrus ar blaškomas savo impulsų; pertraukinėju; turiu tendenciją elgtis impulsyviai.</li><li>Dirbu ties savo priėmimo diapazono išplėtimu ir gebėjimu padaryti pauzę ir užmegzti ryšį su savimi prieš atsakydamas į savo impulsyvumą.</li><li>Natūraliai lieku atviras ir ryšyje su savimi, kai patiriu norą varžyti ar skubinti, ir esu pasiryžęs palaukti.</li></ol></details>
+<details><summary><b>17. Atsakymas į kitų impulsyvumą</b>  Automatinio reagavimo pakeitimas į sąmoningą atsaką į kitus, kai jie įsipainioję intensyviose atskiriančiose emocijose.</summary><ol><li>Kai kitiems sukyla reakcija, iš įpročio reaguoju gynybiškai, paklusdamas arba vengdamas.</li><li>Vis labiau pastebiu savo įprastines reakcijas ir jų poveikį ryšiui.</li><li>Kai patiriu kitų žmonių impulsyvias reakcijas, vis geriau išlaikau ryšį su savimi ir dažniau galiu pasirinkti empatiją ar nuoširdumą; kyla smalsumas apie kitų perspektyvas.</li><li>Atsakau į kitų impulsyvumą su vidine ramybe; priimu kitą, kai jam sukyla reakcija; gebu išlaikyti sutelktą dėmesį.</li></ol></details>
+<details><summary><b>18. Atvirumas grįžtamajam ryšiui</b>  Kitų perspektyvos apie mūsų veiksmus priėmimas su vidine pusiausvyra ir ramybe.</summary><ol><li>Man grįžtamasis ryšys reiškia, kad kažkas yra blogai arba gerai su manim ar kitu. Grįžtamąjį ryšį interpretuoju kaip kritiką ar pagyrimus.</li><li>Noriu pakeisti savo impulsyvias reakcijas į grįžtamąjį ryšį.</li><li>Suprantu, kad grįžtamasis ryšys iš kito yra jo perspektyva ir sieju jį su jo poreikiais; susieju savo reakcijas į grįžtamąjį ryšį su savo poreikiais.</li><li>Priimu grįžtamąjį ryšį, kaip informacija į kurią galiu atsižvelgti aiškiai suvokdamas savo pasirinkimą. Žinau, kad kiti kalba iš savo perspektyvos.</li></ol></details>
+<details><summary><b>19. Naudingas apgailestavimas</b>  Praleistų galimybių patenkinti poreikius pripažinimas ir mokymasis iš jų, be kaltės, gėdos ar savęs baudimo.</summary><ol><li>Prisiimu atsakomybę už kitų jausmus su kalte ir/ar gėda, arba ginu save; atsiprašinėju, kad apsisaugočiau, nuramindamas kito jausmus.</li><li>Turiu naują suvokimą, kad kitų jausmai kyla dėl jų poreikių ir kartais galiu norėti, kad kiti 'susitvarkytų'. Esu sąmoningesnis savo įpročiui kaltinti savęs.</li><li>Labiau gebu transformuoti kaltę į mokymąsi. Ugdau pasiryžimą siekti ryšio su kitais (su empatija ir nuoširdumu), tose situacijose, kurios nesidėlioja kitiems.</li><li>Nuolat esu pasiryžęs atvirai prisiimti atsakomybę už savo indėlį toje baigtyje, kuri neatitiko poreikių; esu pasiryžęs jausti ir išreikšti apgailestavimą; siekiu mokytis ir augti.</li></ol></details>
+<details><summary><b>21. Konfliktų transformavimas</b>  Konfliktų su kitais naudojimas kaip priemonės užmegzti ryšį ir sukurti abipusį rezultatą.</summary><ol><li>Bijau konfliktų arba turiu jiems priklausomybę; nesąmoningai prisirišęs prie nuomonių ir strategijų; būnu šališkas.</li><li>Įsisąmoninu savo reakcijas į konfliktą; pradedu pastebėti savo prisirišimą prie sprendimų, paties konflikto, saugumo ir t.t.</li><li>Pasiryžęs palaikyti visas puses būti išradingiems ir kūrybingiems, ir atsižvelgti į visų suinteresuotųjų poreikius, net ir tuo atveju, kai iškyla mano įprastines reakcijos į konfliktą.</li><li>Esu atviras, smalsus, ir kūrybiškas skirtingoms perspektyvoms, kaip galimybei plėsti sąmoningumą ir imtis veiksmingų priemonių.</li></ol></details>
+<details><summary><b>23. Atviraširdžio davimo ir priėmimo tėkmė</b>  Trūkumo mąstysenos transformavimas į kūrybišką klestėjimą; džiaugsmingas davimas ir priėmimas.</summary><ol><li>Kaupiu resursus ir/arba naudoju siekdamas kontroliuoti kitus; bijau prarasti ar neturėti pakankamai; pinigus ir daiktus tapatinu su saugumu.</li><li>Tampu sąmoningas savo baimei neturėti pakankamai bei dalinimosi vertingumui.</li><li>Didėja sąmoningumas apie automatines programas, kaip kad, norą kaupti ar sunkumą priimti, bet taip pat didėjanti džiaugsmą būti dalinimosi ir priėmimo tėkmėje.</li><li>Džiaugsmas ir lengvumas dalijantis ir priimant su kūrybiškumu ir išradingumu; davimas taip pat yra gavimas.</li></ol></details>
+<details><summary><b>24. Gyvybingumo auginimas</b>  Įsiklausymas į save siekiant palaikyti subalansuotą savęs priežiūrą; energijos auginimas rūpintis gyvybe.</summary><ol><li>Sumažėjusi energija dėl mano nesąmoningų elgesio šablonų ir/arba neramios protinės veiklos.</li><li>Tampu sąmoningas savo energijos lygiui ir kas jam daro įtaką.</li><li>Užmezgu ryšį su poreikiais kaip ištekliais; esu motyvuotas ieškoti būdų, kaip būti išradingam ir dalintis.</li><li>Gaunu energijos prisidėdamas prie kūno, proto, dvasios ir bendruomenės praturtinimo.</li></ol></details>
+<details><summary><b>25. Dalijimasis galia</b>  Dominavimo transformavimas; kiekvieno poreikių vertinimas su abipusiškumu ir pagarba; paklusnumo ir maišto ribų peržengimas.</summary><ol><li>Santykius grindžiu dominavimu ir paklusnumu; bijau, geidžiu arba kaupiu galią.</li><li>Tampu labiau sąmoningas dominavimui ir paklusnumui bei galimybėms kurti abipusišką santykį.</li><li>Pastebiu kai renkuosi paklusti arba bandau dominuoti. Siekiu elgtis abipusiškai, su empatija sau ir kitiems.</li><li>Veikiu vertindamas kiekvieno poreikius ir pagerbdamas kiekvieno autonomiją; peržengiu dominavimą, paklusnumą ir maištą.</li></ol></details>
+<details><summary><b>26. Vaidmenų peržengimas</b>  Sąmoningumas apie tai, kad nesame mūsų vaidmenys; alternatyvų turėjimas renkantis vaidmenis ir reaguojant į kitų pasirinktus vaidmenis.</summary><ol><li>Nesąmoningai įstringu reakcijose į savo ir kitų vaidmenis.</li><li>Tampu sąmoningas kančiai, kuri gali rastis, kai reaguojame į vaidmenis, o ne atsakome į poreikius.</li><li>Gebu atsakyti pasirinkdamas ryšį su savimi, empatiją ir nuoširdumą, o ne reaguoti į savo ir/ar kitų vaidmenis.</li><li>Grakščiai ir lengvai prisiimu, susilaikau nuo ir/ar atsakau į vaidmenis; esu sąmoningas mūsų tarpusavio ryšiui esančiam už mūsų vaidmenų.</li></ol></details>
+<details><summary><b>27. Sąmoningumas apie gebėjimą atsakyti</b>  Laisvas pasirinkimas savo atsako į tai, kas pasireiškia gyvenime, prisiėmimas atsakomybės už savo dalį tame, kas vyksta. Neprisiėmimas atsakomybės už kitų dalį ir pripažinimas, kad mūsų veiksmai turi įtakos kitiems.</summary><ol><li>Aukos sąmonė: stokoju aiškumo apie tai, kas yra kieno; galvoju, kad mano patirtis ir veiksmai gali būti sukelti kitų ar išorinių aplinkybių (pvz.: aš sukėliau tavo, tu sukėlei mano, arba tai sukėlė tavo ar mano reakciją)</li><li>Sužinau apie 'aukos sąmonę' ir jos kainą; jaučiu palengvėjimą ir laisvę suvokdamas mūsų galią, bet vis dar matau save įstrigusį įprastiniuose kaltės ir kaltinimo šablonuose; diagnozuoju kitus, kaip užstrigusiu arba kaltinu, ir bandau šviesti juos siekdamas apsaugoti save.</li><li>Gebu prisiimti atsakomybę už savo patirtis ir pasirinkimus, kai pastebiu kaltinimus, pasiteisinimus, ar nureikšminimus, ir nesistengiu prisiimti atsakomybės už kitų reakcijas ir atsakus.</li><li>Nuosekliai pajėgiu atsakyti pusiausvyroje. Esu įsižeminęs ir ramus savo gyvenimo autorius. Aiškiai suvokiu, kad kiti yra savo gyvenimo autoriai.</li></ol></details>
+<details><summary><b>28. Holistinių sistemų palaikymas</b>  Sąmoningas dalyvavimas kūrime ir evoliucijoje tokių holistinių sistemų, kurios skatina bendrą gerovę.</summary><ol><li>Sukylu prieš struktūras arba joms paklūstu; naudoju organizacines struktūras įtvirtinti savo galią ar jaučiuosi bejėgis santykyje su organizacinėmis taisyklėmis.</li><li>Kai galvoju apie kūrimą sistemų, kurios vertintų susijusių asmenų poreikius, matau apribojančiai, pasiduodu ir/ar jaučiu beviltiškumą.</li><li>Suvokiu galimybę, kad sistemos būtų organizuojamos atsižvelgiant į universalius poreikius; esu pasiryžęs prisidėti su augančių kūrybiškumu prie bendros gerovės.</li><li>Įsitraukiu į sistemų kūrimą ir tobulinimą, su atvirumu grįžtamajam ryšiui ir intencija prisidėti prie bendros gerovės.</li></ol></details>
+		</td>
+		<td>
+<h1>Pagrindinės Prielaidos NVC Praktikoje</h1>
+<details><summary><b>P1. Visi žmonės turi tuos pačius poreikius</b></summary>Mes visi turim tuos pačius poreikius, nors strategijos, kurias naudojam, kad patenkintume tuos poreikius, gali skirtis. Konfliktai nutinka strategijų, o ne poreikių lygmeny.</details>
+<details><summary><b>P2. Visi veiksmai yra bandymai patenkinti poreikius</b></summary>Mūsų troškimas patenkinti poreikius, sąmoningas ar ne, yra visų mūsų veiksmų pagrindas. Mes pasitelkiame smurtą ar kitokius veiksmus neatitinkančius (mūsų ar kitų žmonių) poreikių tik tada, kai neatpažįstame veiksmingesnių strategijų.</details>
+<details><summary><b>P3. Jausmai nurodo į tai, kad poreikiai yra patenkinti arba ne</b></summary>Kitų žmonių veiksmai gali aktyvuoti jausmus, bet jie nėra jausmų priežastis. Jausmai kyla tiesiogiai iš to, ar mums mūsų poreikiai atrodo patenkinti ar ne. Mūsų poreikių patenkinimo įvertinimas, beveik visada, yra paremtas interpretacija ar įsitikinimu. Kai mūsų poreikiai patenkinti, mes galime jaustis laimingi, patenkinti, ramūs ir t.t. Kai jie nepatenkinti, mes galime jaustis liūdni, išsigandę, nusivylę ir t.t.</details>
+<details><summary><b>P4. Tiesiausias kelias į vidinę taiką yra per ryšį su savimi</b></summary>Mūsų gebėjimas pasiekti vidinę taiką nepriklauso nuo mūsų poreikių patenkinimo. Net tada, kai daugelis poreikių nepatenkinti, vidinei taikai gali pakakti, jei užmegsim ryšį su savimi.</details>
+<details><summary><b>P5. Pasirinkimas yra vidinis procesas</b></summary>Nepriklausomai nuo aplinkybių, mes galime patenkinti savo autonomijos poreikį, darydami sąmoningą pasirinkimą, pagrįstą poreikių suvokimu.</details>
+<details><summary><b>P6. Visi žmonės gali atjausti</b></summary>Mes turime įgimtą atjautos gebėjimą, nors ne visada žinome, kaip jį pasiekti. Kai mums atjaučia ir gerbia mūsų pasirinkimo laisvei, mums tampa lengviau atjausti ir save, ir kitus. Auganti atjauta tiesiogiai prisideda prie mūsų gebėjimo tenkinti poreikius taikiai.</details>
+<details><summary><b>P7. Žmonės mėgsta duoti</b></summary>Mes iš prigimties mėgstame padėti kitiems, kai esam užmezgę ryšį su savo ir kitų poreikiais ir suvokiame, kad patys pasirenkame duoti.</details>
+<details><summary><b>P8. Žmonės patenkina poreikius per tarpusavio santykius</b></summary>Mes tenkiname daugybę mūsų poreikių per santykius su kitais žmonėmis ir su gamta, nors dalis poreikių iš esmės yra patenkinami per mūsų santykį su savimi, o kai kurie kiti per dvasinio gyvenimo aspektus. Kai kitų poreikiai nepatenkinami, dalis mūsų poreikių taip pat lieka nepatenkinti.</details>
+<details><summary><b>P9. Mūsų pasaulis siūlo apsčiai išteklių poreikių patenkinimui</b></summary>Kai žmonės bus pasiryžę vertinti kiekvieno poreikius ir bus atgavę ryšio palaikymo bei kūrybiško išteklių dalijimosi įgūdžius, galėsime įveikti mūsų dabartinę vaizduotės krizę ir rasti būdų, kaip atsižvelgti į kiekvieno pagrindinius poreikius.</details>
+<details><summary><b>P10. Žmonės keičiasi</b></summary>Tiek mūsų poreikiai, tiek ir jų tenkinimo strategijos laikui bėgant keičiasi. Kur mes bebūtume dabartiniu metu, atskirai ar kartu, visi žmonės geba augti ir keistis.</details>
+
+
+<h1>Pagrindinės Intencijos Naudojant NVC</h1>
+<h2>A. Gyvenimas atvira širdimi</h2>
+<details><summary><b>Ia1. Atjauta sau</b></summary>Siekiame paleisti visus savęs kaltinimus, savęs vertinimus ir reikalavimus sau, ir sutikti save su atjauta ir suprasti poreikius, kuriuos stengiamės patenkinti visais savo veiksmais.</details>
+<details><summary><b>Ia2. Kalbėjimas iš širdies</b></summary>Kai išreiškiame save, mes siekiame kalbėti iš širdies, išreikšdami savo jausmus ir poreikius, ir pateikdami konkrečius, įvykdomus prašymus.</details>
+<details><summary><b>Ia3. Priėmimas su atjauta</b></summary>Kai klausomės kitų, mes siekiame už jų išraiškos ir veiksmų išgirsti jausmus ir poreikius, nepriklausomai nuo to, kaip jie save išreiškia, net jei jų išraiškos ar veiksmai (pvz. vertinimai, reikalavimai, fizinis smurtas) neatitinka mūsų poreikių.</details>
+<details><summary><b>Ia4. Pirmenybės teikimas ryšiui</b></summary>Mes siekiame sutelkti dėmesį į atviraširdį ryšį su kiekvieno poreikiais, o ne į ieškojimą greitų ir potencialiai kompromisinių sprendimų, ir ypač sudėtingose situacijose.</details>
+<details><summary><b>Ia5. Anapus "teisingumo" ir "klaidingumo"</b></summary>Mes siekiame pakeisti savo įprotį vertinti dalykus kaip "teisingus" ir "klaidingus" (moralizuojantis vertinimas), ir vietoj to sutelkti dėmesį į tai, ar žmogaus poreikiai atrodo patenkinti (poreikiais grįstas vertinimas).</details>
+<h2>B. Pasirinkimas, Atsakomybė, Taika</h2>
+<details><summary><b>Ib1. Atsakomybės prisiėmimas už savo jausmus</b></summary>Mes siekiame užmegzti ryšį savo jausmais ir poreikiais, atpažindami, kad kiti neturi galios priversti mus ką nors jausti. Šis atpažinimas mus įgalina imtis veiksmų, patenkinti savo poreikius, o ne laukti, kol kiti pasikeis.</details>
+<details><summary><b>Ib2. Atsakomybės prisiėmimas už savo veiksmus</b></summary>Mes siekiame atpažinti savo pasirinkimą kiekvienoje akimirkoje ir imtis veiksmų, kurie, mūsų nuomone, labiausiai tikėtina, kad patenkins mūsų poreikius. Mes siekiame vengti veiksmų, motyvuotų baime, kalte, gėda, atlygio troškimu ar pareigų ir prievolių idėjomis.</details>
+<details><summary><b>Ib3. Gyvenimas taikoje su nepatenkintais poreikiais</b></summary>Kai mūsų poreikiai nėra nepatenkinti, siekiame dirbti su savo jausmais, užmegzdami ryšį su poreikiais, o ne reikalauti juos patenkinti.</details>
+<details><summary><b>Ib4. Didinti gebėjimą tenkinti poreikius</b></summary>Mes siekiame plėtoti savo vidinius išteklius, ypač mūsų NVC įgūdžius, kad galėtume prisidėti prie didesnio ryšio ir didesnės strategijų įvairovės poreikių tenkinimui.</details>
+<details><summary><b>Ib5. Didinti gebėjimą priimti dabarties akimirką</b></summary>Mes siekiame plėtoti savo gebėjimą kiekvieną akimirką užmegzti ryšį su savo ir kitų poreikiais ir reaguoti į kylančius stimulus tą akimirką, o ne kreipti dėmesį į statiškas istorijas apie tai, kokie esame mes ir kiti.</details>
+<h2>C. Dalijimasis Galia (Bendradarbiavimas)</h2>
+<details><summary><b>Ic1. Rūpinimasis visų žmonių poreikiais</b></summary>Mes siekiame prašyti, o ne reikalauti, tokiu būdu likdami atviri kitų strategijoms. Gaudami "Ne" į mūsų prašymą ar sakydami "Ne" kito prašymui, siekiame eiti link sprendimų atsižvelgiančių į kiekvieno poreikius, o ne vien tik į mūsų ar vien tik į jų.</details>
+<details><summary><b>Ic2. Gerinti gebėjimus dalintis ištekliais atsižvelgiant į poreikius</b></summary>Turėdami tikslą patenkinti kuo daugiau žmonių poreikių ir tausoti aplinką, siekiame kurti ir įgyvendinti strategijas užtikrinančias, kad pasaulio ištekliais būtų dalijamasi atsižvelgiant į tuos poreikius.</details>
+<details><summary><b>Ic3. Apsaugantis jėgos naudojimas</b></summary>Mes siekiame naudoti minimalią jėgą būtiną siekiant apsaugoti, o ne tam, kad pamokytume, nubaustume ar gautume tai, ko norime, be kitų sutikimo, ir tik tais atvejais, kai matome, jog dialogas netenkina skubaus fizinio saugumo poreikio. Mes siekiame sugrįžti prie dialogo, kai tik atkuriame fizinį saugumą.</details>
+		</td>
+	</tr>
+</table>
+
+
+</body>
+</html>
