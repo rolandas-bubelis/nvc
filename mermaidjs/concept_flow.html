@@ -15,48 +15,61 @@
         mermaid.initialize({ startOnLoad: true });
     </script>
 
-<div class="mermaid">
-    graph LR
-P4[P4. Tiesiausias kelias į vidinę taiką yra per ryšį su savimi]
-P5[P5. Pasirinkimas yra vidinis procesas]
-P6[P6. Visi žmonės gali atjausti]
-P9[P9. Mūsų pasaulis siūlo apsčiai išteklių poreikių patenkinimui]
-Ia1[Ia1. Atjauta sau]
-Ia2[Ia2. Kalbėjimas iš širdies]
-Ia3[Ia3. Priėmimas su atjauta]
-Ia4[Ia4. Pirmenybės teikimas ryšiui]
-Ia5["Ia5. Anapus #quot;teisingumo#quot; ir #quot;klaidingumo#quot;"]
-Ib2[Ib2. Atsakomybės prisiėmimas už savo veiksmus]
-Ib3[Ib3. Gyvenimas taikoje su nepatenkintais poreikiais]
-Ib4[Ib4. Didinti gebėjimą tenkinti poreikius]
-Ib5[Ib5. Didinti gebėjimą priimti dabarties akimirką]
-Ic2[Ic2. Gerinti gebėjimus dalintis ištekliais atsižvelgiant į poreikius]
-Ic3[Ic3. Apsaugantis jėgos naudojimas]
-</div>
-
-
 	<div class="mermaid">
-        graph TB
+	    graph LR
         subgraph Legenda
-			direction TB
     		P[NVC Prielaida] --- B[Įsitikinimas]
     		B --- I[NVC Intencija]
     		I --- AI[Papildoma intencija]
     		AI --- S[NVC Įgūdis]
     		S --- A[NVC Įgūdis, bet faktiškai požiūris]
-    		A --- M[Mišrus: NVC Įgūdis su įsitikinimu]
 		end
+
+        classDef assumption fill:#0ff,stroke:#333,stroke-width:4px;
+		class P,P1,P2,P3,P4,P5,P6,P7,P8,P9,P10 assumption;
+
+        classDef belief fill:#09f,stroke:#333,stroke-width:4px;
+		class B,ALLNEEDS,B2,B3,B4 belief;
+
+        classDef intention fill:#d0f,stroke:#333,stroke-width:4px;
+		class I,Ia1,Ia2,Ia3,Ia4,Ia5,Ib1,Ib2,Ib3,Ib4,Ib5,Ic1,Ic2,Ic3 intention;
+
+
+        classDef attitudeintention fill:#b9f,stroke:#333,stroke-width:4px;
+		class AI,I1 attitudeintention;
+
+        classDef skill fill:#ff0,stroke:#333,stroke-width:4px;
+		class S,S1,S2,S3,S7,S8,S9,S10,S12,S13,S14,S15,S16,S17,S18,S20,S21,S23,S24,S25,S26,S27,S28 skill;
+
+        classDef attitudeskill fill:#ffa,stroke:#333,stroke-width:4px;
+		class A,S4,S5,S6,S11,S19,S22 attitudeskill;
+
+        classDef mix fill:#f90,stroke:#333,stroke-width:4px;
+		class M mix;
+
+
+	</div>
+
+
+	<div class="mermaid">
+        graph TB
         
-        P1[P1. Visi žmonės turi<br />tuos pačius poreikius] --> ALLNEEDS[Visi kiekvieno asmens<br />poreikiai yra svarbūs]
-        ALLNEEDS --> S6[6. Sąmoningumas poreikiams] 
+        P1[P1. Visi žmonės turi<br />tuos pačius poreikius]
+        ALLNEEDS[Visi kiekvieno asmens<br />poreikiai yra svarbūs]
+        P1 --> ALLNEEDS
+        S6[6. Sąmoningumas poreikiams]
+        ALLNEEDS --> S6	 
 		S6 --> P2[P2. Visi veiksmai yra<br />bandymai patenkinti poreikius]
         P2 --> B2[Visos strategijos, tiek išorinės - elgesys,<br />tiek vidinės - mąstymas, yra siekis apliepti poreikius] 
         B2 --> B3[Kai strategijos neatliepia poreikių, jas verta keisti,<br />tokiu būdu, kad daugiau poreikių būtų atliepta,<br />tuo pačiu išlaikant senų poreikių atliepimą]
-        B3 --> S22[22. Dėkingumas]
-        S22 --> S1["1. Sutelktas dėmesys (į čia ir dabar)"]
+		B3 --> P5[P5. Pasirinkimas yra vidinis procesas]
+        P5 --> S22[22. Dėkingumas]
+		S22 --> Ib5[Ib5. Didinti gebėjimą priimti dabarties akimirką]
+        Ib5 --> S1["1. Sutelktas dėmesys (į čia ir dabar)"]
 		S1 --> P3[P3. Jausmai nurodo į tai,<br />kad poreikiai yra patenkinti arba ne]
 		S1 --> P10[P10. Žmonės keičiasi]
-        P10 & S20 --> I1[Mąstymo ir elgesio transformavimas]
+		P10 & S20 --> Ib2[Ib2. Atsakomybės prisiėmimas už savo veiksmus]
+        Ib2 --> I1[Mąstymo ir elgesio transformavimas]
         I1 --> S12[12. Įžvalgumas]
         S12 --> S2[2. Stebėjimas]
         P3 --> B4[Jausmai yra svarbūs,<br />nes informuoja apie poreikius ir mintis]
@@ -64,27 +77,39 @@ Ic3[Ic3. Apsaugantis jėgos naudojimas]
 		S3 --> Ib1[Ib1. Atsakomybės prisiėmimas už savo jausmus]
 		Ib1 --> S5[5. Atsakomybės prisiėmimas<br />už savo jausmus]
 		ALLNEEDS --> P8[P8. Žmonės patenkina poreikius per tarpusavio santykius]
-		P8 --> Ic1[Ic1. Rūpinimasis visų žmonių poreikiais]
+		P8 --> P6[P6. Visi žmonės gali atjausti]
+		P6 --> Ic1[Ic1. Rūpinimasis visų žmonių poreikiais]
 		Ic1 --> S13[13. Gyvenimas susisiejus tarpusavyje]
 		S13 --> P7[P7. Žmonės mėgsta duoti]
-		P7 --> S25[25. Dalijimasis galia]
+		P7 --> Ic2[Ic2. Gerinti gebėjimus dalintis ištekliais atsižvelgiant į poreikius]
+		Ic2 --> S25[25. Dalijimasis galia]
 		S23 --> S20[20. Lankstumas bendraujant]
-		S25 --> S24[24. Gyvybingumo auginimas]
+		S25 --> Ib4[Ib4. Didinti gebėjimą tenkinti poreikius]
+		Ib4 --> S24[24. Gyvybingumo auginimas]
 		S24 --> S23[23. Atviraširdžio davimo<br />ir priėmimo tėkmė]
+		S25 --> Ic3[Ic3. Apsaugantis jėgos naudojimas]
 		S25 --> S28[28. Holistinių sistemų palaikymas]
-		S2 & S11 --> S4[4. Savęs priėmimas]
-		S4 --> S7[7. Ryšio su savimi atstatymas<br />ir atsigavimas nuo impulsyvumo]
+		S2 & S11 --> Ia1[Ia1. Atjauta sau]
+		Ia1 --> S4[4. Savęs priėmimas]
+		S4 --> P4[P4. Tiesiausias kelias į vidinę taiką yra per ryšį su savimi]
+		P4 --> S7[7. Ryšio su savimi atstatymas<br />ir atsigavimas nuo impulsyvumo]
 		S5 & S7 --> S16[16. Kantrybė]
-		I1 --> S11[11. Priešo vaizdinius išsklaidymas]
+		I1 --> Ia5["Ia5. Anapus #quot;teisingumo#quot; ir #quot;klaidingumo#quot;"]
+		Ia5 --> Ia3[Ia3. Priėmimas su atjauta]
+		Ia3 --> S11[11. Priešo vaizdinius išsklaidymas]
 		S11 --> S10[10. Empatija]
 		S10 --> S21[21. Konfliktų transformavimas]
 		S21 & S7 --> S17[17. Atsakymas į kitų impulsyvumą]
 		S17 & S20 --> S18[18. Atvirumas grįžtamajam ryšiui]
-		S10 --> S15[15. Pagalba ryšio sukūrimui]
-		S15 --> S14[14. Nuoširdi saviraiška]
-		S21 & S4 & S5 & S16 --> S19[19. Naudingas apgailestavimas]
+		S10 --> Ia4[Ia4. Pirmenybės teikimas ryšiui]
+		Ia4 --> S15[15. Pagalba ryšio sukūrimui]
+		S15 --> Ia2[Ia2. Kalbėjimas iš širdies]
+		Ia2 --> S14[14. Nuoširdi saviraiška]
+		S21 & S4 & S5 & S16 --> Ib3[Ib3. Gyvenimas taikoje su nepatenkintais poreikiais]
+		Ib3 --> S19[19. Naudingas apgailestavimas]
 		S19 & S4 & S5 --> S9[9. Gedėjimas]
-		S20 --> S8[8. Sąmoningumas prašymams<br />ir prašymų darymas]
+		S20 --> P9[P9. Mūsų pasaulis siūlo apsčiai išteklių poreikių patenkinimui]
+		P9 --> S8[8. Sąmoningumas prašymams<br />ir prašymų darymas]
 		S5 --> S27[27. Sąmoningumas apie<br />gebėjimą atsakyti]
 		S20 --> S26[26. Vaidmenų peržengimas]
 
@@ -95,7 +120,7 @@ Ic3[Ic3. Apsaugantis jėgos naudojimas]
         classDef belief fill:#09f,stroke:#333,stroke-width:4px;
 		class B,ALLNEEDS,B2,B3,B4 belief;
 
-        classDef intention fill:#b0f,stroke:#333,stroke-width:4px;
+        classDef intention fill:#d0f,stroke:#333,stroke-width:4px;
 		class I,Ia1,Ia2,Ia3,Ia4,Ia5,Ib1,Ib2,Ib3,Ib4,Ib5,Ic1,Ic2,Ic3 intention;
 
 
@@ -103,13 +128,13 @@ Ic3[Ic3. Apsaugantis jėgos naudojimas]
 		class AI,I1 attitudeintention;
 
         classDef skill fill:#ff0,stroke:#333,stroke-width:4px;
-		class S,END1,S1,S2,S3,S8,S9,S16 skill;
+		class S,S1,S2,S3,S7,S8,S9,S10,S12,S13,S14,S15,S16,S17,S18,S20,S21,S23,S24,S25,S26,S27,S28 skill;
 
         classDef attitudeskill fill:#ffa,stroke:#333,stroke-width:4px;
-		class A,S4,S5,S11 attitudeskill;
+		class A,S4,S5,S6,S11,S19,S22 attitudeskill;
 
         classDef mix fill:#f90,stroke:#333,stroke-width:4px;
-		class M,END2,S6,S22 mix;
+		class M mix;
 
     </div>
 
@@ -181,6 +206,121 @@ Ic3[Ic3. Apsaugantis jėgos naudojimas]
 		</td>
 	</tr>
 </table>
+
+	<div class="mermaid">
+        graph TB
+        subgraph Sritys
+			direction TB
+    		AR1[Sąmoningumo kėlimas] --- AR2[Nuostatų atsiminimas]
+    		AR2 --- AR3[Išbūvimas su jausmais]
+    		AR3 --- AR4[Nuostatų/Mąstymo šablonų atpažinimas]
+    		AR4 --- AR5[Elgesio keitimas]
+		end
+
+        subgraph NVC Prielaidos
+    		P[NVC Prielaida]
+		end
+
+
+        subgraph Įsitikinimai
+    		B[Įsitikinimas]
+		end
+
+
+        subgraph NVC Intencijos
+    		I[NVC Intencija]
+    		I --- AI[Papildoma intencija]
+		end
+        
+        subgraph NVC Įgūdžiai
+    		S[NVC Įgūdis]
+    		S --- A[NVC Įgūdis, bet faktiškai požiūris]
+		end
+
+
+        P1[P1. Visi žmonės turi<br />tuos pačius poreikius]
+        ALLNEEDS[Visi kiekvieno asmens<br />poreikiai yra svarbūs]
+        P1 --> ALLNEEDS
+        S6[6. Sąmoningumas poreikiams]
+        ALLNEEDS --> S6
+		S6 --> P2[P2. Visi veiksmai yra<br />bandymai patenkinti poreikius]
+        P2 --> B2[Visos strategijos, tiek išorinės - elgesys,<br />tiek vidinės - mąstymas, yra siekis apliepti poreikius] 
+        B2 --> B3[Kai strategijos neatliepia poreikių, jas verta keisti,<br />tokiu būdu, kad daugiau poreikių būtų atliepta,<br />tuo pačiu išlaikant senų poreikių atliepimą]
+		B3 --> P5[P5. Pasirinkimas yra vidinis procesas]
+        P5 --> S22[22. Dėkingumas]
+		S22 --> Ib5[Ib5. Didinti gebėjimą priimti dabarties akimirką]
+        Ib5 --> S1["1. Sutelktas dėmesys (į čia ir dabar)"]
+		S1 --> P3[P3. Jausmai nurodo į tai,<br />kad poreikiai yra patenkinti arba ne]
+		S1 --> P10[P10. Žmonės keičiasi]
+		P10 & S20 --> Ib2[Ib2. Atsakomybės prisiėmimas už savo veiksmus]
+        Ib2 --> I1[Mąstymo ir elgesio transformavimas]
+        I1 --> S12[12. Įžvalgumas]
+        S12 --> S2[2. Stebėjimas]
+        P3 --> B4[Jausmai yra svarbūs,<br />nes informuoja apie poreikius ir mintis]
+        B4 --> S3[3. Jausmų sąmoningumas]
+		S3 --> Ib1[Ib1. Atsakomybės prisiėmimas už savo jausmus]
+		Ib1 --> S5[5. Atsakomybės prisiėmimas<br />už savo jausmus]
+		ALLNEEDS --> P8[P8. Žmonės patenkina poreikius per tarpusavio santykius]
+		P8 --> P6[P6. Visi žmonės gali atjausti]
+		P6 --> Ic1[Ic1. Rūpinimasis visų žmonių poreikiais]
+		Ic1 --> S13[13. Gyvenimas susisiejus tarpusavyje]
+		S13 --> P7[P7. Žmonės mėgsta duoti]
+		P7 --> Ic2[Ic2. Gerinti gebėjimus dalintis ištekliais atsižvelgiant į poreikius]
+		Ic2 --> S25[25. Dalijimasis galia]
+		S23 --> S20[20. Lankstumas bendraujant]
+		S25 --> Ib4[Ib4. Didinti gebėjimą tenkinti poreikius]
+		Ib4 --> S24[24. Gyvybingumo auginimas]
+		S24 --> S23[23. Atviraširdžio davimo<br />ir priėmimo tėkmė]
+		S25 --> Ic3[Ic3. Apsaugantis jėgos naudojimas]
+		S25 --> S28[28. Holistinių sistemų palaikymas]
+		S2 & S11 --> Ia1[Ia1. Atjauta sau]
+		Ia1 --> S4[4. Savęs priėmimas]
+		S4 --> P4[P4. Tiesiausias kelias į vidinę taiką yra per ryšį su savimi]
+		P4 --> S7[7. Ryšio su savimi atstatymas<br />ir atsigavimas nuo impulsyvumo]
+		S5 & S7 --> S16[16. Kantrybė]
+		I1 --> Ia5["Ia5. Anapus #quot;teisingumo#quot; ir #quot;klaidingumo#quot;"]
+		Ia5 --> Ia3[Ia3. Priėmimas su atjauta]
+		Ia3 --> S11[11. Priešo vaizdinius išsklaidymas]
+		S11 --> S10[10. Empatija]
+		S10 --> S21[21. Konfliktų transformavimas]
+		S21 & S7 --> S17[17. Atsakymas į kitų impulsyvumą]
+		S17 & S20 --> S18[18. Atvirumas grįžtamajam ryšiui]
+		S10 --> Ia4[Ia4. Pirmenybės teikimas ryšiui]
+		Ia4 --> S15[15. Pagalba ryšio sukūrimui]
+		S15 --> Ia2[Ia2. Kalbėjimas iš širdies]
+		Ia2 --> S14[14. Nuoširdi saviraiška]
+		S21 & S4 & S5 & S16 --> Ib3[Ib3. Gyvenimas taikoje su nepatenkintais poreikiais]
+		Ib3 --> S19[19. Naudingas apgailestavimas]
+		S19 & S4 & S5 --> S9[9. Gedėjimas]
+		S20 --> P9[P9. Mūsų pasaulis siūlo apsčiai išteklių poreikių patenkinimui]
+		P9 --> S8[8. Sąmoningumas prašymams<br />ir prašymų darymas]
+		S5 --> S27[27. Sąmoningumas apie<br />gebėjimą atsakyti]
+		S20 --> S26[26. Vaidmenų peržengimas]
+
+
+        classDef assumption fill:#0ff,stroke:#333,stroke-width:4px;
+		class P,P1,P2,P3,P4,P5,P6,P7,P8,P9,P10 assumption;
+
+        classDef belief fill:#09f,stroke:#333,stroke-width:4px;
+		class B,ALLNEEDS,B2,B3,B4 belief;
+
+        classDef intention fill:#d0f,stroke:#333,stroke-width:4px;
+		class I,Ia1,Ia2,Ia3,Ia4,Ia5,Ib1,Ib2,Ib3,Ib4,Ib5,Ic1,Ic2,Ic3 intention;
+
+
+        classDef attitudeintention fill:#b9f,stroke:#333,stroke-width:4px;
+		class AI,I1 attitudeintention;
+
+        classDef skill fill:#ff0,stroke:#333,stroke-width:4px;
+		class S,S1,S2,S3,S7,S8,S9,S10,S12,S13,S14,S15,S16,S17,S18,S20,S21,S23,S24,S25,S26,S27,S28 skill;
+
+        classDef attitudeskill fill:#ffa,stroke:#333,stroke-width:4px;
+		class A,S4,S5,S6,S11,S19,S22 attitudeskill;
+
+        classDef mix fill:#f90,stroke:#333,stroke-width:4px;
+		class M mix;
+
+    </div>
 
 
 </body>
